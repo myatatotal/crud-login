@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "user1",
+      "password": "123456"
+    },
+    {
+      "id": "2",
+      "username": "user2",
+      "password": "password2"
+    }
+  ],
+  "items": [
+    {
+      "id": "678",
+      "name": "01",
+      "description": "Empresa"
+    },
+    {
+      "id": "795",
+      "name": "02",
+      "description": "equipe"
+    },
+    {
+      "id": "827",
+      "name": "03",
+      "description": "Todos"
+    }
+  ]
+}
