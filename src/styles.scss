@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
+.masthead {
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    background-image: url(../src/assets/img/9155702.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+.stage {
+  width: 80% !important;
+  height: 100vh !important;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+    color: white;
+    font-style: italic;
+  }
+  
+  h2 {
+    color: white !important;
+    text-align: center;
+    font-style: italic;
+  }
+
+  li {
+    opacity : 0.8;
+    background-color:rgb(242, 240, 240) !important;
+  }
+  

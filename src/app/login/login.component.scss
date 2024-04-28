@@ -1,3 +1,39 @@
+
+
+.masthead {
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  background-image: url('../../assets/img/8275340.jpg') !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.stage {
+  width: 40% !important;
+  height: 90vh !important;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+}
+
 .btn1 {
   margin-top: 20px;
+  font-style: italic;
+  color: white;
+  background-color: orangered;
+}
+
+label {
+  color: white;
+  font-style: italic;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  font-style: italic;
 }
