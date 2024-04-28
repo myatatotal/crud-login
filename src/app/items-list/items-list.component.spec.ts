@@ -9,17 +9,16 @@ beforeEach(async () => {
   await TestBed.configureTestingModule({
     // other configurations...
     providers: [
-      { 
-        provide: ItemsService, 
-        useValue: { 
+      {
+        provide: ItemsService,
+        useValue: {
           getItems: () => of([]), // add this line
           // other methods...
-        } 
+        },
       },
       // other providers...
-    ]
-  })
-  .compileComponents();
+    ],
+  }).compileComponents();
 });
 describe('ItemsListComponent', () => {
   let component: ItemsListComponent;
@@ -27,10 +26,9 @@ describe('ItemsListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ItemsListComponent]
-    })
-    .compileComponents();
-    
+      declarations: [ItemsListComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(ItemsListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

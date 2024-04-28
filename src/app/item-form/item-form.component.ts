@@ -6,16 +6,15 @@ import { Item } from '../item.model';
 @Component({
   selector: 'app-item-form',
   templateUrl: './item-form.component.html',
-  styleUrls: ['./item-form.component.scss']
+  styleUrls: ['./item-form.component.scss'],
 })
 export class ItemFormComponent implements OnInit {
-
   @Input() item: Item = {
     name: '',
     id: 0, // Definindo o ID inicial como 0
-    description: ''
+    description: '',
   };
-  
+
   isEdit = false;
   errorMessage: string = '';
 
@@ -23,34 +22,35 @@ export class ItemFormComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private itemsService: ItemsService
-  ) { }
+  ) {}
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
+    this.route.params.subscribe((params) => {
       if (params['id'] !== undefined && params['id'] !== null) {
         const itemId = +params['id']; // Convertendo para número
         if (!isNaN(itemId)) {
           this.isEdit = true;
           this.itemsService.getItem(itemId).subscribe(
-            item => {
+            (item) => {
               if (item) {
                 this.item = item;
               } else {
-                this.errorMessage = "Item not found.";
+                this.errorMessage = 'Item not found.';
               }
             },
-            error => {
+            (error) => {
               console.error(error);
               if (error.status === 404) {
-                this.errorMessage = "Item not found.";
+                this.errorMessage = 'Item not found.';
               } else {
-                this.errorMessage = "Something bad happened; please try again later.";
+                this.errorMessage =
+                  'Something bad happened; please try again later.';
               }
             }
           );
         } else {
-          console.error("ID is not a valid number:", params['id']);
-          this.errorMessage = "Item ID is not a valid number.";
+          console.error('ID is not a valid number:', params['id']);
+          this.errorMessage = 'Item ID is not a valid number.';
           this.router.navigate(['/items']);
         }
       } else {
@@ -58,14 +58,15 @@ export class ItemFormComponent implements OnInit {
       }
     });
   }
-  
+
   cancelEdit() {
     this.router.navigate(['/items']);
   }
 
   onSubmit() {
     if (this.isEdit) {
-      this.itemsService.updateItem(this.item.id, this.item)
+      this.itemsService
+        .updateItem(this.item.id, this.item)
         .subscribe(() => this.router.navigate(['/items']));
     } else {
       const newItem: Item = { ...this.item, id: this.generateUniqueId() };
@@ -81,6 +82,4 @@ export class ItemFormComponent implements OnInit {
     const randomNumber = Math.floor(Math.random() * 1000);
     return randomNumber.toString();
   }
-  
-
 }

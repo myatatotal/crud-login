@@ -9,11 +9,11 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'items', component: ItemsListComponent },
   { path: 'items/new', component: ItemFormComponent }, // Route for new item form
-  { path: 'items/:id/edit', component: ItemFormComponent } // Route for editing item
+  { path: 'items/:id/edit', component: ItemFormComponent }, // Route for editing item
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

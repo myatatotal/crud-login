@@ -9,14 +9,20 @@ import { FormsModule } from '@angular/forms';
 beforeEach(async () => {
   await TestBed.configureTestingModule({
     imports: [FormsModule], // add this line
-    declarations: [ ItemFormComponent ],
+    declarations: [ItemFormComponent],
     providers: [
-      { provide: ItemsService, useValue: { getItem: () => of({}), updateItem: () => of({}), addItem: () => of({}) } },
+      {
+        provide: ItemsService,
+        useValue: {
+          getItem: () => of({}),
+          updateItem: () => of({}),
+          addItem: () => of({}),
+        },
+      },
       { provide: Router, useValue: { navigate: () => {} } },
-      { provide: ActivatedRoute, useValue: { params: of({ id: 1 }) } }
-    ]
-  })
-  .compileComponents();
+      { provide: ActivatedRoute, useValue: { params: of({ id: 1 }) } },
+    ],
+  }).compileComponents();
 });
 
 describe('ItemFormComponent', () => {
@@ -27,14 +33,20 @@ describe('ItemFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ItemFormComponent ],
+      declarations: [ItemFormComponent],
       providers: [
-        { provide: ItemsService, useValue: { getItem: () => of({}), updateItem: () => of({}), addItem: () => of({}) } },
+        {
+          provide: ItemsService,
+          useValue: {
+            getItem: () => of({}),
+            updateItem: () => of({}),
+            addItem: () => of({}),
+          },
+        },
         { provide: Router, useValue: { navigate: () => {} } },
-        { provide: ActivatedRoute, useValue: { params: of({ id: 1 }) } }
-      ]
-    })
-    .compileComponents();
+        { provide: ActivatedRoute, useValue: { params: of({ id: 1 }) } },
+      ],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -6,12 +6,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-items',
   templateUrl: './items-list.component.html',
-  styleUrls: ['./items-list.component.scss']
+  styleUrls: ['./items-list.component.scss'],
 })
-
-
 export class ItemsListComponent implements OnInit {
- // @Input() items: Item | null | undefined;
+  // @Input() items: Item | null | undefined;
   items: Item[] = [];
   isLoading = false;
   error: string = '';
@@ -21,7 +19,7 @@ export class ItemsListComponent implements OnInit {
     private itemsService: ItemsService,
     private route: ActivatedRoute,
     private router: Router
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.getItems();
@@ -31,15 +29,14 @@ export class ItemsListComponent implements OnInit {
     this.isLoading = true;
     this.error = '';
     this.itemsService.getItems().subscribe(
-      items => {
+      (items) => {
         this.items = items;
       },
-      error => {
+      (error) => {
         this.error = error;
       }
     );
   }
-  
 
   openEditForm(id: number) {
     this.router.navigate(['/items', id, 'edit']);
@@ -52,12 +49,14 @@ export class ItemsListComponent implements OnInit {
 
   deleteItem(id: number) {
     if (confirm('Are you sure you want to delete this item?')) {
-      this.itemsService.deleteItem(id)
-        .subscribe(() => {
+      this.itemsService.deleteItem(id).subscribe(
+        () => {
           this.getItems(); // Refresh item list after deletion
-        }, error => {
+        },
+        (error) => {
           this.error = error.message; // Handle delete error
-        });
+        }
+      );
     }
   }
 }

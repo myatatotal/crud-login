@@ -1,22 +1,36 @@
-
 <div class="container">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="name">Name</label>
-      <input type="text" class="form-control" id="name" [(ngModel)]="item.name" name="name" required>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        [(ngModel)]="item.name"
+        name="name"
+        required
+      />
     </div>
     <div class="form-group">
       <label for="description">Description (optional)</label>
-      <textarea class="form-control" id="description" [(ngModel)]="item.description" name="description" rows="3"></textarea>
+      <textarea
+        class="form-control"
+        id="description"
+        [(ngModel)]="item.description"
+        name="description"
+        rows="3"
+      ></textarea>
     </div>
     <button type="submit" class="btn btn-primary dangs" [disabled]="!item.name">
-      {{ isEdit ? 'Update' : 'Create' }}
+      {{ isEdit ? "Update" : "Create" }}
     </button>
-    <button *ngIf="isEdit" type="button" class="btn btn-secondary dangs" (click)="cancelEdit()">
-        Cancel
-      </button>
-      
+    <button
+      *ngIf="isEdit"
+      type="button"
+      class="btn btn-secondary dangs"
+      (click)="cancelEdit()"
+    >
+      Cancel
+    </button>
   </form>
 </div>
-
-  
