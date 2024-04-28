@@ -12,7 +12,7 @@ user para senha: 123456
 
 use para iniciar os testes unitarios: ng test
 
-<a href="https://myatatotal.github.io/crud-login/" target_"blank">Link para o Projeto</a>
+<a href="https://github.com/myatatotal/crud-login" target_"blank">Link para o Projeto</a>
 
 
 
