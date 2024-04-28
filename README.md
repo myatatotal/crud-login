@@ -22,6 +22,8 @@ Deve ser instalado na maquina o NodeJS - <a href="https://nodejs.org/en/download
 
 Deve ser instalado na maquina o Angular - npm install -g @angular/cli
 
+Observação: Produzido em Angular 17, para funcionar deve rodar na mesma versão
+
 # Rodar a aplicação
 
 use para instalar o projeto: yarn install
