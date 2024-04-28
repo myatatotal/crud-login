@@ -1,4 +1,20 @@
-# AngularTest
+
+
+# Teste para o perfil Dev - Frontend:
+
+<a href="https://github.com/myatatotal/crud-login">Link para o Projeto</a>
+ 
+Título do teste: Desenvolvimento de um aplicativo de gerenciamento de tarefas
+ 
+Descrição: O objetivo deste teste é avaliar as habilidades do candidato no desenvolvimento de um aplicativo de gerenciamento de tarefas utilizando Angular. O candidato deve ser capaz de implementar os seguintes requisitos:
+
+# Instalação
+
+Deve ser instalado na maquina o NodeJS - <a href="https://nodejs.org/en/download">NodeJS</a>
+
+Deve ser instalado na maquina o Angular - npm install -g @angular/cli
+
+# Rodar a aplicação
 
 use para instalar o projeto: yarn install
 
@@ -11,8 +27,6 @@ use para login: user1
 user para senha: 123456
 
 use para iniciar os testes unitarios: ng test
-
-<a href="https://github.com/myatatotal/crud-login">Link para o Projeto</a>
 
 
 
