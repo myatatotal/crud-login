@@ -1,6 +1,6 @@
 # AngularTest
 
-use para instalar o projeto: npm install
+use para instalar o projeto: yarn install
 
 use para iniciar o servidor: npm run server
 
