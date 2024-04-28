@@ -8,6 +8,14 @@ Título do teste: Desenvolvimento de um aplicativo de gerenciamento de tarefas
  
 Descrição: O objetivo deste teste é avaliar as habilidades do candidato no desenvolvimento de um aplicativo de gerenciamento de tarefas utilizando Angular. O candidato deve ser capaz de implementar os seguintes requisitos:
 
+1. Criar uma tela para exibir a lista de tarefas cadastradas.
+2. Criar uma tela para cadastrar uma nova tarefa.
+3. Criar uma tela para editar as informações de uma tarefa existente.
+4. Criar uma tela para excluir uma tarefa do sistema.
+5. Criar uma tela de login e cadastro de usuário para o sistema.
+6. Utilizar o framework RxJs para tratar eventos assíncronos e manipulação de dados.
+7. Utilizar o framework de teste Karma para realizar testes unitários no código.
+
 # Instalação
 
 Deve ser instalado na maquina o NodeJS - <a href="https://nodejs.org/en/download">NodeJS</a>
